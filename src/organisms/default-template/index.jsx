@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  string, bool, arrayOf, element,
+  bool, arrayOf, element,
 } from 'prop-types';
 
 import { DefaultContainer, Navbar } from '~/organisms';
