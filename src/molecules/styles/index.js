@@ -11,7 +11,6 @@ export const SliderContainer = styled.div`
   padding-right: 80px;
   position: relative;
 
-
   ::after {
     content: "";
     background: url(${props => props.background});
@@ -24,8 +23,11 @@ export const SliderContainer = styled.div`
     z-index: -1;
     background-size: cover;
     background-position: center center;
-    filter: grayscale();
-}
+  }
+
+  .btn {
+    max-width: 300px;
+  }
 
   h1 {
     text-transform: uppercase;

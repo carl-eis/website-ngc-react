@@ -17,9 +17,15 @@ const FeaturedSlider = ({
   <SliderContainer
     background={backgroundImage}
   >
-    <h1>{title1}</h1>
-    <h1>{title2}</h1>
-    <p>{quote}</p>
+    <div className="container">
+      <h1>{title1}</h1>
+      <h1>{title2}</h1>
+      <p>{quote}</p>
+      <button className="btn btn-primary" onClick={buttonClick}>
+        {buttonText}
+      </button>
+      {children}
+    </div>
   </SliderContainer>
 );
 
