@@ -14,13 +14,9 @@ import registerServiceWorker from '~/redux/scripts/registerServiceWorker';
 
 const target = document.getElementById('root');
 
+/* Will switch to ConnectedRouter later, using hash for github pages */
 ReactDOM.render(
   <Provider store={store}>
-    { /*   <ConnectedRouter history={history}>
-      <div>
-        <App />
-      </div>
-</ConnectedRouter> */}
     <HashRouter history={history}>
       <div>
         <App />
