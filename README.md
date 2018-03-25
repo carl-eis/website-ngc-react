@@ -3,6 +3,11 @@
 We are trying to build this site:
 https://html.nkdev.info/youplay/dark-index.html
 
+We are live on Github Pages at:
+https://carl-eis.github.io/website-ngc-react/#/
+
+To deploy, use `yarn deploy`
+
 Good luck!
 
 ------------------
