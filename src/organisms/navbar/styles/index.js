@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+import {
+  MediaQueries as media,
+} from '~/atoms';
+
 export const NavbarContainer = styled.div`
   background-color: rgba(0,0,0,.4);
   height: 80px;
@@ -66,10 +70,23 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarTitleContainer = styled.div`
   display: block;
-  font-size: 25px;
+  font-size: 1.4rem;
   text-transform: lowercase;
   font-family: Lato, sans-serif;
   margin: 0 15px 0 15px;
   white-space: nowrap;
   width: auto;
+
+  ${media.desktop`
+
+  `}
+
+  ${media.tablet`
+
+  `}
+
+  ${media.phone`
+      font-size: 1rem;
+  `}
+
 `;
