@@ -62,3 +62,10 @@ export const NavbarLinkContainer = styled.div`
     color: white;
   }
 `;
+
+export const NavbarTitleContainer = styled.div`
+  font-size: 25px;
+  text-transform: lowercase;
+  font-family: Lato, sans-serif;
+  margin: 0 15px 0 15px;
+`;

@@ -10,9 +10,10 @@ import { PageContainer } from '../styles';
 const DefaultTemplate = ({
   navbar,
   children,
+  ...rest
 }) => (
   <PageContainer>
-    {navbar && <Navbar />}
+    {navbar && <Navbar {...rest} />}
     <DefaultContainer>
       {children}
     </DefaultContainer>

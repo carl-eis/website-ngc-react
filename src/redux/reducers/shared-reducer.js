@@ -6,7 +6,7 @@
 
 /* Set the initial state */
 const initialState = {
-
+  websiteTitle: 'nova gaming',
 };
 
 /* Create and export the reducer function */

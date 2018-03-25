@@ -9,7 +9,7 @@ import {
 
 /* Set the initial state */
 const initialState = {
-  pageTitle: 'Hello, world!',
+
 };
 
 /* Create and export the reducer function */

@@ -12,7 +12,7 @@ const mapStateToProps = ({
 }) => ({
   ...pageReducer,
   routerReducer: routing,
-  sharedReducer,
+  shared: sharedReducer,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
