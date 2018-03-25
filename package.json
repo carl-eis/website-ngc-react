@@ -2,6 +2,7 @@
   "name": "react-starter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://carl-eis.github.io/website-ngc-react",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -63,7 +64,9 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "lint": "eslint --ext .jsx --ext .js src/"
+    "lint": "eslint --ext .jsx --ext .js src/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -109,6 +112,7 @@
   },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-testcafe": "^0.2.1"
+    "eslint-plugin-testcafe": "^0.2.1",
+    "gh-pages": "^1.1.0"
   }
 }
