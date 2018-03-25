@@ -1,15 +1,20 @@
 import React from 'react';
-import { JumbotronMain } from '~/pages/home/molecules';
 import { string } from 'prop-types';
+
+import { FeaturedSlider } from '~/molecules';
+import { DefaultTemplate } from '~/organisms';
 
 const Home = ({
   pageTitle,
 }) => (
-  <div>
-    <JumbotronMain
-      title={pageTitle}
-    />
-  </div>
+  <DefaultTemplate navbar>
+    <FeaturedSlider
+      backgroundImage="assets/images/banner-bg.jpg"
+      />
+    <div>
+      Page Content
+    </div>
+  </DefaultTemplate>
 );
 
 Home.propTypes = {

@@ -2,7 +2,15 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: rgba(8, 3, 37, 0.9);
+  color: white;
 }
+
+h1 h2 h3 h4 h5 h6 {
+  color: white;
+}
+
+
 
 /* Get rid of button outlines on OSX */
 .btn {
