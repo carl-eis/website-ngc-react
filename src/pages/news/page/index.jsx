@@ -1,6 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
+import { ContentContainer } from '~/atoms';
 import { DefaultTemplate } from '~/organisms';
 
 const News = ({
@@ -12,9 +13,9 @@ const News = ({
     title={websiteTitle}
     {...rest}
   >
-    <div>
+    <ContentContainer>
       <h1>News Page</h1>
-    </div>
+    </ContentContainer>
   </DefaultTemplate>
 );
 

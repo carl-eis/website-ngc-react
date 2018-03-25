@@ -21,7 +21,7 @@ export const NavbarContent = styled.div`
 
 export const NavbarPullLeft = styled.div`
   height: 100%;
-  flex: 1;
+  flex: 2;
 
   display: flex;
   flex-direction: row;
@@ -43,6 +43,7 @@ export const LinkTitle = styled.div`
   font-size: 13px;
   text-transform: uppercase;
   font-family: Lato, sans-serif;
+  white-space: nowrap;
 `;
 
 export const LinkSubTitle = styled.div`
@@ -64,8 +65,11 @@ export const NavbarLinkContainer = styled.div`
 `;
 
 export const NavbarTitleContainer = styled.div`
+  display: block;
   font-size: 25px;
   text-transform: lowercase;
   font-family: Lato, sans-serif;
   margin: 0 15px 0 15px;
+  white-space: nowrap;
+  width: auto;
 `;
