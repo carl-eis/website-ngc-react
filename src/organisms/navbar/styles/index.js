@@ -39,7 +39,26 @@ export const NavbarPullRight = styled.div`
   justify-content: flex-end;
 `;
 
+export const LinkTitle = styled.div`
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: Lato, sans-serif;
+`;
+
+export const LinkSubTitle = styled.div`
+  font-weight: 400;
+  text-transform: lowercase;
+  font-family: Lato, sans-serif;
+  white-space: nowrap;
+  font-size: 11px;
+  color: rgba(255,255,255,.5);
+  transition: color 0.3s;
+`;
+
 export const NavbarLinkContainer = styled.div`
   cursor: pointer;
   padding: 0 12px 0 12px;
+  &:hover ${LinkSubTitle} {
+    color: white;
+  }
 `;

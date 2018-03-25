@@ -15,22 +15,15 @@ const Navbar = () => (
       <NavbarContent data-qa="navbar-content">
         <NavbarPullLeft data-qa="navbar-pull">
           <NavbarLink
-            title="Test 1"
+            title="Home"
+            subtitle="start here"
           />
         </NavbarPullLeft>
         <NavbarPullRight data-qa="navbar-pull">
-          <NavbarLink
-            title="Test 1"
-          />
-          <NavbarLink
-            title="Test 2"
-          />
-          <NavbarLink
-            title="Test 3"
-          />
-          <NavbarLink
-            title="Test 4"
-          />
+          <NavbarLink />
+          <NavbarLink />
+          <NavbarLink />
+          <NavbarLink />
         </NavbarPullRight>
       </NavbarContent>
     </div>
