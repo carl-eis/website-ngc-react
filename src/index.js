@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
+import { ConnectedRouter } from 'react-router-redux'; // eslint-disable-line
 import { HashRouter } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.css';
