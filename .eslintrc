@@ -1,0 +1,121 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:testcafe/recommended"
+  ],
+  "rules": {
+    "function-paren-newline": [
+      "off"
+    ],
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "components": [
+          "Label"
+        ],
+        "required": {
+          "every": [
+            "name"
+          ]
+        },
+        "allowChildren": false
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "to"
+        ]
+      }
+    ],
+    "linebreak-style": [
+      "off"
+    ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "consistent": true,
+          "minProperties": 3
+        },
+        "ObjectPattern": {
+          "multiline": true,
+          "consistent": true,
+          "minProperties": 3
+        },
+        "ImportDeclaration": {
+          "multiline": true,
+          "consistent": true,
+          "minProperties": 3
+        },
+        "ExportDeclaration": {
+          "multiline": true,
+          "consistent": true,
+          "minProperties": 3
+        }
+      }
+    ],
+    "indent": [
+      2
+    ],
+    "react/jsx-indent": [
+      "error",
+      2
+    ],
+    "react/prop-types" : [
+      "warn"
+    ],
+    "no-underscore-dangle": [
+      2,
+      {
+        "allow": [
+          "_id",
+          "_original"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "~/*"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "off"
+    ],
+    "import/no-extraneous-dependencies": [
+      "off"
+    ],
+    "import/prefer-default-export": [
+      "warn"
+    ]
+  },
+  "globals": {
+    "__DEV__": true
+  }
+}
