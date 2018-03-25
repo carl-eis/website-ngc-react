@@ -37,9 +37,3 @@ export const SliderContainer = styled.div`
     letter-spacing: 0.03em;
   }
 `;
-
-/*
-  background-image: url(${props => props.background});
-  background-size: cover;
-  background-position: center;
-*/
