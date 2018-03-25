@@ -2,7 +2,7 @@ import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Home from '~/pages/home/page';
+import News from './page';
 import newsPageReducer from './page/reducer';
 
 const mapStateToProps = ({
@@ -22,7 +22,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Home);
+)(News);
 
 export const newsPageReducers = {
   newsPageReducer,

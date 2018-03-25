@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import { FeaturedSlider } from '~/molecules';
 import { DefaultTemplate } from '~/organisms';
 
 const News = ({
@@ -13,9 +12,6 @@ const News = ({
     title={websiteTitle}
     {...rest}
   >
-    <FeaturedSlider
-      backgroundImage="assets/images/banner-bg.jpg"
-    />
     <div>
       <h1>News Page</h1>
     </div>

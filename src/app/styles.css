@@ -10,6 +10,17 @@ h1 h2 h3 h4 h5 h6 {
   color: white;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover, a:link, a:active
+{
+  color: inherit;
+  text-decoration: none;
+  cursor:pointer;
+}
 
 
 /* Get rid of button outlines on OSX */

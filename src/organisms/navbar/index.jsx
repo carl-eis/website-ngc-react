@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-
+// import { Container } from 'reactstrap';
 import NavbarLink from './navbar-link';
 
 import {
@@ -26,6 +26,7 @@ const Navbar = ({ title }) => (
           <NavbarLink
             title="News"
             subtitle="blog"
+            link="/news"
           />
           <NavbarLink
             title="Events"
