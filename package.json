@@ -1,8 +1,17 @@
 {
-  "name": "react-starter",
+  "name": "website-ngc-react",
   "version": "0.1.0",
   "private": true,
   "homepage": "http://carl-eis.github.io/website-ngc-react",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "eslint --ext .jsx --ext .js src/",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "author": "Carl Eiserman <carleiserman@gmail.com>",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -60,13 +69,10 @@
     "webpack-manifest-plugin": "1.3.2",
     "whatwg-fetch": "2.0.3"
   },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom",
-    "lint": "eslint --ext .jsx --ext .js src/",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-testcafe": "^0.2.1",
+    "gh-pages": "^1.1.0"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -102,6 +108,14 @@
       "node"
     ]
   },
+  "maintainers": [
+    "Carl Eiserman <carleiserman@gmail.com>",
+    "Barry Michael Doyle <barry@barrymichaeldoyle.com> (https://www.barrymichaeldoyle.com)"
+  ],
+  "contributors": [
+    "Carl Eiserman <carleiserman@gmail.com>",
+    "Barry Michael Doyle <barry@barrymichaeldoyle.com> (https://www.barrymichaeldoyle.com)"
+  ],
   "babel": {
     "presets": [
       "react-app"
@@ -109,10 +123,5 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "devDependencies": {
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-testcafe": "^0.2.1",
-    "gh-pages": "^1.1.0"
   }
 }
