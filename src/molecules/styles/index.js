@@ -34,7 +34,6 @@ export const SliderImageContainer = styled.div`
       z-index: -1;
     }
   }
-
 `;
 
 export const SliderContentContainer = styled.div`
@@ -54,8 +53,6 @@ export const SliderContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 80px;
-  padding-right: 80px;
   opacity: 1;
 
   .btn {
