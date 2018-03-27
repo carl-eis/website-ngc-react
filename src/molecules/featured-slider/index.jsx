@@ -15,7 +15,9 @@ import {
 } from '../styles';
 
 const {
-  SparkScroll, SparkProxy, sparkScrollFactory,
+  SparkScroll,
+  // SparkProxy,
+  // sparkScrollFactory,
 }
   = require('react-spark-scroll-rekapi')({
     invalidateAutomatically: true,
