@@ -3,6 +3,7 @@ import { string } from 'prop-types';
 
 import { FeaturedSlider } from '~/molecules';
 import { DefaultTemplate } from '~/organisms';
+import { MockPageContent } from '~/atoms';
 
 const Home = ({
   websiteTitle,
@@ -17,9 +18,12 @@ const Home = ({
       backgroundImage="assets/images/banner-bg.jpg"
     />
 
-    <div>
-        Page Content
-    </div>
+    <MockPageContent>
+      <div>
+          Page Content
+      </div>
+    </MockPageContent>
+
   </DefaultTemplate>
 );
 
