@@ -16,13 +16,13 @@ export const SliderImageContainer = styled.div`
   left: 0;
   right: 0;
 
-  .jarallax-feature-slider {
+  div {
     height: 100%;
     width: 100%;
     position: relative;
     z-index: 0;
 
-    .jarallax-img {
+    img {
       position: absolute;
       object-fit: cover;
       /* support for plugin https://github.com/bfred-it/object-fit-images */
