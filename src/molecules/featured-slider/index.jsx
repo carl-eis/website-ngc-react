@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { generate } from 'shortid';
 import {
   jarallax,
-  // jarallaxElement,
+  jarallaxElement,
   // jarallaxVideo,
 } from 'jarallax';
 
 import {
-  element, string, func,
+  element, string, func, number,
 } from 'prop-types';
 
 import {
@@ -15,9 +15,8 @@ import {
   SliderImageContainer,
   SliderContentContainer,
   SliderContent,
+  SliderContentFixed,
 } from '../styles';
-
-declare var $: any;
 
 /* eslint-disable react/prefer-stateless-function */
 class FeaturedSlider extends Component {
@@ -27,19 +26,20 @@ class FeaturedSlider extends Component {
   };
 
   componentWillMount() {
-    const uniqueClassId = `jarallax-${generate()}`;
+    const id = `jarallax-${generate()}`;
     const infoId = `infobox-${generate()}`;
-    this.setState({ id: uniqueClassId, infoId });
+    this.setState({ id, infoId });
   }
 
   componentDidMount() {
+    const { parallaxSpeed: speed } = this.props;
+
     jarallax(document.querySelector(`.${this.state.id}`), {
-      speed: 0.2,
+      speed,
       disableParallax: /iPad|iPhone|iPod|Android/,
       disableVideo: /iPad|iPhone|iPod|Android/,
     });
 
-    const infoId = `.${this.state.infoId}`;
 
     // const infoBox = $(infoId).offset(infoId.height).top;
     // $(window).scroll(() => {
@@ -68,19 +68,22 @@ class FeaturedSlider extends Component {
           <div className={this.state.id}>
             <img src={backgroundImage} className="jarallax-img" alt="" />
           </div>
-
         </SliderImageContainer>
         <SliderContentContainer data-qa="slider-content-container">
-          <div className={`container ${this.state.infoId}`}>
-            <SliderContent data-qa="slider-content">
-              <h1>{title}</h1>
-              <h1>{subtitle}</h1>
-              <p>{quote}</p>
-              <button className="btn btn-primary" onClick={buttonClick}>
-                {buttonText}
-              </button>
-              {children}
-            </SliderContent>
+          <div className="container">
+            <div className={`jarallax-container ${this.state.infoId}`}>
+              <SliderContent data-qa="slider-content">
+                <SliderContentFixed>
+                  <h1>{title}</h1>
+                  <h1>{subtitle}</h1>
+                  <p>{quote}</p>
+                  <button className="btn btn-primary" onClick={buttonClick}>
+                    {buttonText}
+                  </button>
+                  {children}
+                </SliderContentFixed>
+              </SliderContent>
+            </div>
           </div>
         </SliderContentContainer>
       </SliderContainer>
@@ -97,6 +100,7 @@ FeaturedSlider.propTypes = {
   buttonClick: func,
   children: element,
   backgroundImage: string,
+  parallaxSpeed: number,
 };
 
 FeaturedSlider.defaultProps = {
@@ -107,6 +111,7 @@ FeaturedSlider.defaultProps = {
   buttonClick: () => { },
   children: undefined,
   backgroundImage: '',
+  parallaxSpeed: 0.2,
 };
 
 export default FeaturedSlider;

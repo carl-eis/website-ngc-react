@@ -26,7 +26,6 @@ export const SliderImageContainer = styled.div`
       position: absolute;
       object-fit: cover;
       /* support for plugin https://github.com/bfred-it/object-fit-images */
-      font-family: 'object-fit: cover;';
       top: 0;
       left: 0;
       width: 100%;
@@ -34,6 +33,10 @@ export const SliderImageContainer = styled.div`
       z-index: -1;
     }
   }
+`;
+
+export const SliderContent = styled.div`
+
 `;
 
 export const SliderContentContainer = styled.div`
@@ -44,10 +47,34 @@ export const SliderContentContainer = styled.div`
 
   .container {
     height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+
+    .jarallax-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 0;
+
+      & > ${SliderContent} {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    }
+
+
+
   }
 `;
 
-export const SliderContent = styled.div`
+export const SliderContentFixed = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -57,10 +84,6 @@ export const SliderContent = styled.div`
 
   .btn {
     max-width: 300px;
-  }
-
-  .container {
-    height: 100%;
   }
 
   h1 {
