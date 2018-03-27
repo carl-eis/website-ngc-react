@@ -35,7 +35,7 @@ NavbarLink.propTypes = {
 NavbarLink.defaultProps = {
   dropdown: undefined,
   link: undefined,
-  subtitle: 'Subtitle',
+  subtitle: undefined,
 };
 
 export default NavbarLink;

@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 import {
   NavbarLinkContainer, LinkTitle, LinkSubTitle,
 } from './styles';
-// import Dropdown from './dropdown';
+import Dropdown from './dropdown';
 
 const Main = ({
   dropdown, subtitle, title,
@@ -25,10 +25,7 @@ const Main = ({
     <LinkSubTitle>
       {subtitle}
     </LinkSubTitle>
-    {/* TODO:
-      Add the Dropdown component in somewhere
-      around here...
-     */}
+    {dropdown && <Dropdown dropdown={dropdown} />}
   </NavbarLinkContainer>
 );
 
