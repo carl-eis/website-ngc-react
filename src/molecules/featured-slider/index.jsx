@@ -14,6 +14,13 @@ import {
   SliderContentFixed,
 } from '../styles';
 
+const {
+  SparkScroll, SparkProxy, sparkScrollFactory,
+}
+  = require('react-spark-scroll-rekapi')({
+    invalidateAutomatically: true,
+  });
+
 /* eslint-disable react/prefer-stateless-function */
 class FeaturedSlider extends Component {
   state = {
@@ -56,7 +63,13 @@ class FeaturedSlider extends Component {
 
         </SliderImageContainer>
         <SliderContentContainer data-qa="slider-content-container">
-          <div className={`container ${this.state.infoId}`}>
+          <SparkScroll.div
+            className={`container ${this.state.infoId}`}
+            timeline={{
+              topTop: { opacity: 1 },
+              'topTop+450': { opacity: [0, 'easeOutQuart'] },
+            }}
+          >
             <SliderContent data-qa="slider-content">
               <SliderContentFixed>
                 <h1>{title}</h1>
@@ -68,7 +81,7 @@ class FeaturedSlider extends Component {
                 {children}
               </SliderContentFixed>
             </SliderContent>
-          </div>
+          </SparkScroll.div>
         </SliderContentContainer>
       </SliderContainer>
     );

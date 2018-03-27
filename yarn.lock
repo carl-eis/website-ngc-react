@@ -6073,6 +6073,16 @@ react-spark-scroll-gsap@^4.0.0:
     lodash "^3.10.1"
     react-spark-scroll "^4.0.0"
 
+react-spark-scroll-rekapi@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-spark-scroll-rekapi/-/react-spark-scroll-rekapi-4.0.0.tgz#c582eaa2b9910ac6ec2291774baeb8a34e9498a4"
+  dependencies:
+    animation-frame "^0.3.0"
+    events "^1.0.2"
+    lodash "^3.10.1"
+    react-spark-scroll "^4.0.0"
+    rekapi "^1.4.4"
+
 react-spark-scroll@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-spark-scroll/-/react-spark-scroll-4.0.0.tgz#be6de59951dc3b736a803f107b873ea5c1ca355d"
@@ -6304,6 +6314,13 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+rekapi@^1.4.4:
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/rekapi/-/rekapi-1.7.4.tgz#2e984a0bd2527f2bc8df1ced8758539181cad307"
+  dependencies:
+    requirejs "2.1.10"
+    shifty "1.5.0"
+
 relateurl@0.2.x:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
@@ -6408,6 +6425,10 @@ require-uncached@^1.0.3:
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
+
+requirejs@2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/requirejs/-/requirejs-2.1.10.tgz#1e1d7f608790e532a422c6199dad2abe15484b54"
 
 requires-port@1.0.x, requires-port@1.x.x, requires-port@~1.0.0:
   version "1.0.0"
@@ -6670,6 +6691,10 @@ shell-quote@1.6.1:
 shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
+
+shifty@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/shifty/-/shifty-1.5.0.tgz#b4af0bfc73db3cf756a6c115fe7522c23efe40bd"
 
 shortid@^2.2.8:
   version "2.2.8"
@@ -7299,6 +7324,10 @@ uglifyjs-webpack-plugin@^0.4.6:
 uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+
+underscore@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
 union-value@^1.0.0:
   version "1.0.0"
