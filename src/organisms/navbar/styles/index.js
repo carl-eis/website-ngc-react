@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-
-import {
-  MediaQueries as media,
-} from '~/atoms';
+import { MediaQueries as media } from '~/atoms';
 
 export const NavbarContainer = styled.div`
   background-color: rgba(8, 3, 37, 0.4);
@@ -43,33 +40,10 @@ export const NavbarPullRight = styled.div`
   justify-content: flex-end;
 `;
 
-export const LinkTitle = styled.div`
-  font-size: 13px;
-  text-transform: uppercase;
-  font-family: Lato, sans-serif;
-  white-space: nowrap;
-`;
-
-export const LinkSubTitle = styled.div`
-  font-weight: 400;
-  text-transform: lowercase;
-  font-family: Lato, sans-serif;
-  white-space: nowrap;
-  font-size: 11px;
-  color: rgba(255,255,255,.5);
-  transition: color 0.3s;
-`;
-
-export const NavbarLinkContainer = styled.div`
-  cursor: pointer;
-  padding: 0 12px 0 12px;
-  &:hover ${LinkSubTitle} {
-    color: white;
-  }
-`;
-
 export const NavbarTitleContainer = styled.div`
   display: block;
+  height: 80px;
+  line-height: 75px;
   font-size: 1.4rem;
   text-transform: lowercase;
   font-family: Lato, sans-serif;
@@ -88,5 +62,4 @@ export const NavbarTitleContainer = styled.div`
   ${media.phone`
       font-size: 1rem;
   `}
-
 `;
