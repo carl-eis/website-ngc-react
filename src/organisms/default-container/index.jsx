@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  element, arrayOf, bool,
+  arrayOf, bool, node, oneOfType,
 } from 'prop-types';
 import { ResponsiveContainer } from '../styles';
 
@@ -11,7 +11,7 @@ const DefaultContainer = ({ navbarPadding, children }) => (
 );
 
 DefaultContainer.propTypes = {
-  children: arrayOf([element]),
+  children: oneOfType([arrayOf(node), node]),
   navbarPadding: bool,
 };
 

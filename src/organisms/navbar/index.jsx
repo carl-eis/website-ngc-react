@@ -22,6 +22,7 @@ const Navbar = ({ title }) => (
           <NavbarLink
             title="Home"
             subtitle="start here"
+            dropdown={<div />}
           />
           <NavbarLink
             title="News"
@@ -35,11 +36,14 @@ const Navbar = ({ title }) => (
           <NavbarLink
             title="Forum"
             subtitle="Discussions"
-            showCaret={false}
           />
         </NavbarPullLeft>
         <NavbarPullRight data-qa="navbar-pull">
-          <NavbarLink />
+          <NavbarLink
+            title="Right"
+            subtitle="Sub"
+            link="/"
+          />
         </NavbarPullRight>
       </NavbarContent>
     </div>

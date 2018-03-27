@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  bool, arrayOf, element,
+  arrayOf, bool, node, oneOfType,
 } from 'prop-types';
 
 import { DefaultContainer, Navbar } from '~/organisms';
@@ -21,7 +21,7 @@ const DefaultTemplate = ({
 );
 
 DefaultTemplate.propTypes = {
-  children: arrayOf(element),
+  children: oneOfType([arrayOf(node), node]),
   navbar: bool,
 };
 
