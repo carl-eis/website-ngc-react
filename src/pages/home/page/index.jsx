@@ -16,6 +16,7 @@ const Home = ({
     <FeaturedSlider
       backgroundImage="assets/images/banner-bg.jpg"
     />
+
     <div>
         Page Content
     </div>
