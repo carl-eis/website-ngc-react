@@ -101,6 +101,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+animation-frame@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/animation-frame/-/animation-frame-0.3.0.tgz#3bb3f446ba53da38bba345582f435be3ab8aee29"
+
 ansi-align@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-align/-/ansi-align-2.0.0.tgz#c36aeccba563b89ceb556f3690f0b1d9e3547f7f"
@@ -2578,7 +2582,7 @@ eventemitter3@1.x.x:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-1.2.0.tgz#1c86991d816ad1e504750e73874224ecf3bec508"
 
-events@^1.0.0:
+events@^1.0.0, events@^1.0.2:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
 
@@ -3174,6 +3178,10 @@ graceful-fs@4.1.11, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
+
+gsap@^1.16.1:
+  version "1.20.4"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-1.20.4.tgz#005fba2a7bfbb3b9d27bd77e1634d2bad365a86a"
 
 gzip-size@3.0.0:
   version "3.0.0"
@@ -4594,6 +4602,10 @@ lodash.uniq@^4.5.0:
 "lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.5"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.5.tgz#99a92d65c0272debe8c96b6057bc8fbfa3bed511"
+
+lodash@^3.10.1:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 loglevel@^1.4.1:
   version "1.6.1"
@@ -6050,6 +6062,24 @@ react-scrollbar-size@^2.0.2:
     prop-types "^15.6.0"
     react-event-listener "^0.5.1"
     stifle "^1.0.2"
+
+react-spark-scroll-gsap@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-spark-scroll-gsap/-/react-spark-scroll-gsap-4.0.0.tgz#a4ad920219a9e63a28720a9402e69e9dbd8bb20a"
+  dependencies:
+    animation-frame "^0.3.0"
+    events "^1.0.2"
+    gsap "^1.16.1"
+    lodash "^3.10.1"
+    react-spark-scroll "^4.0.0"
+
+react-spark-scroll@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-spark-scroll/-/react-spark-scroll-4.0.0.tgz#be6de59951dc3b736a803f107b873ea5c1ca355d"
+  dependencies:
+    animation-frame "^0.3.0"
+    events "^1.0.2"
+    lodash "^3.10.1"
 
 react-transition-group@^2.2.1:
   version "2.2.1"

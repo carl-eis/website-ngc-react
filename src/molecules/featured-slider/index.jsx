@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { generate } from 'shortid';
-import {
-  jarallax,
-  jarallaxElement,
-  // jarallaxVideo,
-} from 'jarallax';
+import { jarallax } from 'jarallax';
 
 import {
   element, string, func, number,
@@ -33,22 +29,11 @@ class FeaturedSlider extends Component {
 
   componentDidMount() {
     const { parallaxSpeed: speed } = this.props;
-
     jarallax(document.querySelector(`.${this.state.id}`), {
       speed,
       disableParallax: /iPad|iPhone|iPod|Android/,
       disableVideo: /iPad|iPhone|iPod|Android/,
     });
-
-
-    // const infoBox = $(infoId).offset(infoId.height).top;
-    // $(window).scroll(() => {
-    //   if ((infoBox - $(window).scrollTop()) < 20) {
-    //     $(infoId).stop().fadeTo(100, 0);
-    //   } else {
-    //     $(infoId).stop().fadeTo('fast', 1);
-    //   }
-    // });
   }
 
   render() {
@@ -68,22 +53,21 @@ class FeaturedSlider extends Component {
           <div className={this.state.id}>
             <img src={backgroundImage} className="jarallax-img" alt="" />
           </div>
+
         </SliderImageContainer>
         <SliderContentContainer data-qa="slider-content-container">
-          <div className="container">
-            <div className={`jarallax-container ${this.state.infoId}`}>
-              <SliderContent data-qa="slider-content">
-                <SliderContentFixed>
-                  <h1>{title}</h1>
-                  <h1>{subtitle}</h1>
-                  <p>{quote}</p>
-                  <button className="btn btn-primary" onClick={buttonClick}>
-                    {buttonText}
-                  </button>
-                  {children}
-                </SliderContentFixed>
-              </SliderContent>
-            </div>
+          <div className={`container ${this.state.infoId}`}>
+            <SliderContent data-qa="slider-content">
+              <SliderContentFixed>
+                <h1>{title}</h1>
+                <h1>{subtitle}</h1>
+                <p>{quote}</p>
+                <button className="btn btn-primary" onClick={buttonClick}>
+                  {buttonText}
+                </button>
+                {children}
+              </SliderContentFixed>
+            </SliderContent>
           </div>
         </SliderContentContainer>
       </SliderContainer>

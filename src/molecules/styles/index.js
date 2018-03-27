@@ -51,13 +51,7 @@ export const SliderContentContainer = styled.div`
     position: relative;
     z-index: 0;
 
-    .jarallax-container {
-      height: 100%;
-      width: 100%;
-      position: relative;
-      z-index: 0;
-
-      & > ${SliderContent} {
+    & > ${SliderContent} {
       position: absolute;
       object-fit: cover;
       top: 0;
@@ -66,11 +60,6 @@ export const SliderContentContainer = styled.div`
       height: 100%;
       z-index: -1;
     }
-
-    }
-
-
-
   }
 `;
 
