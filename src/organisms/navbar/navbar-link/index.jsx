@@ -1,46 +1,41 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { string, bool } from 'prop-types';
-import 'font-awesome/css/font-awesome.min.css';
-import FontAwesome from 'react-fontawesome';
-
 import {
-  NavbarLinkContainer, LinkTitle, LinkSubTitle,
-} from '../styles';
+  arrayOf, element, oneOfType, shape, string,
+} from 'prop-types';
+import 'font-awesome/css/font-awesome.min.css';
 
-const NavbarLink = ({
-  title, subtitle, showCaret, link,
-}) => (
+import Main from './main';
+
+const NavbarLink = ({ link, ...rest }) => (link ?
   <Link to={link}>
-    <NavbarLinkContainer>
-      <LinkTitle>
-        {title}
-        {showCaret &&
-          <Fragment>
-            &nbsp;&nbsp;&nbsp;
-            <FontAwesome name="chevron-down" />
-          </Fragment>
-        }
-      </LinkTitle>
-      <LinkSubTitle>
-        {subtitle}
-      </LinkSubTitle>
-    </NavbarLinkContainer>
-  </Link>
+    <Main {...rest} />
+  </Link> : <Main {...rest} />
 );
 
 NavbarLink.propTypes = {
-  title: string,
-  subtitle: string,
-  showCaret: bool,
+  dropdown: oneOfType([
+    arrayOf(oneOfType([
+      shape({
+        label: string,
+        link: string,
+      }),
+      arrayOf(shape({
+        label: string,
+        link: string,
+      })),
+    ])),
+    element,
+  ]),
   link: string,
+  subtitle: string,
+  title: string.isRequired,
 };
 
 NavbarLink.defaultProps = {
-  title: 'Link Title',
+  dropdown: undefined,
+  link: undefined,
   subtitle: 'Subtitle',
-  showCaret: true,
-  link: '/',
 };
 
 export default NavbarLink;
