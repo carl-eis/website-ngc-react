@@ -5,7 +5,7 @@ import {
 } from '~/atoms';
 
 export const NavbarContainer = styled.div`
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(8, 3, 37, 0.4);
   height: 80px;
   position: fixed;
   z-index: 10;
