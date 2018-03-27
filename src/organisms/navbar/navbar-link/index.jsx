@@ -15,12 +15,12 @@ const NavbarLink = ({
     <NavbarLinkContainer>
       <LinkTitle>
         {title}
-        {showCaret && (
-        <Fragment>
-                &nbsp;&nbsp;&nbsp;
-          <FontAwesome name="chevron-down" />
-        </Fragment>
-          )}
+        {showCaret &&
+          <Fragment>
+            &nbsp;&nbsp;&nbsp;
+            <FontAwesome name="chevron-down" />
+          </Fragment>
+        }
       </LinkTitle>
       <LinkSubTitle>
         {subtitle}

@@ -61,8 +61,9 @@ export const LinkSubTitle = styled.div`
 `;
 
 export const NavbarLinkContainer = styled.div`
+  height: 80px;
   cursor: pointer;
-  padding: 0 12px 0 12px;
+  padding: 24.24242px 12px;
   &:hover ${LinkSubTitle} {
     color: white;
   }
@@ -70,6 +71,8 @@ export const NavbarLinkContainer = styled.div`
 
 export const NavbarTitleContainer = styled.div`
   display: block;
+  height: 80px;
+  line-height: 75px;
   font-size: 1.4rem;
   text-transform: lowercase;
   font-family: Lato, sans-serif;
