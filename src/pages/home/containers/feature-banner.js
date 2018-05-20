@@ -1,21 +1,24 @@
-import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Home from '~/pages/home/page';
+import { FeaturedSlider } from '~/molecules';
 
 const mapStateToProps = ({
-  homePageReducer,
-  sharedReducer: { websiteTitle },
-  routing,
+  homePageReducer: {
+    bannerTitle: title,
+    bannerSubTitle: subtitle,
+    bannerQuote: quote,
+    bannerButtonText: buttonText,
+  },
 }) => ({
-  ...homePageReducer,
-  routerReducer: routing,
-  websiteTitle,
+  title,
+  subtitle,
+  quote,
+  buttonText,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  changePage: () => push('/about-us'),
+
 }, dispatch);
 
 const mergeProps = (stateProps, dispatchProps, ownProps) => ({
@@ -28,4 +31,4 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
   mergeProps,
-)(Home);
+)(FeaturedSlider);

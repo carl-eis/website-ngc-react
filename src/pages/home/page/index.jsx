@@ -1,7 +1,7 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-import { FeaturedSlider } from '~/molecules';
+import FeaturedBanner from '~/pages/home/containers/feature-banner';
 import { DefaultTemplate } from '~/organisms';
 import { MockPageContent } from '~/atoms';
 
@@ -12,7 +12,7 @@ const Home = ({
     navbar
     title={websiteTitle}
   >
-    <FeaturedSlider
+    <FeaturedBanner
       backgroundImage="assets/images/banner-bg.jpg"
     />
 

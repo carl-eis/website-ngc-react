@@ -3,7 +3,10 @@ import {
 } from './actions';
 
 const initialState = {
-
+  bannerTitle: 'Nova Gaming',
+  bannerSubTitle: 'Community',
+  bannerQuote: 'By Gamers, For Gamers',
+  bannerButtonText: 'Forum',
 };
 
 const homePageReducer = (state = initialState, action) => {
