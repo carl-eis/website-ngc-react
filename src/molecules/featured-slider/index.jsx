@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { generate } from 'shortid';
-import { jarallax } from 'jarallax';
+import { Parallax, Background } from 'react-parallax';
 
 import {
   element, string, func, number,
