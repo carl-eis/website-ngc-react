@@ -43,7 +43,7 @@ export const SliderContentContainer = styled.div`
   position: relative;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 550px;
 
   .container {
     height: 100%;

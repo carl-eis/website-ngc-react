@@ -23,7 +23,6 @@ const Home = ({
           Page Content
       </div>
     </MockPageContent>
-
   </DefaultTemplate>
 );
 
