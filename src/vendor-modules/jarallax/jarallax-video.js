@@ -1,3 +1,4 @@
+/* eslint-disable */
 import VideoWorker from 'video-worker';
 import global from 'global';
 import domReady from 'lite-ready';
@@ -10,7 +11,7 @@ jarallaxVideo();
 
 // data-jarallax-video initialization
 domReady(() => {
-    if (typeof jarallax !== 'undefined') {
-        jarallax(document.querySelectorAll('[data-jarallax-video]'));
-    }
+  if (typeof jarallax !== 'undefined') {
+    jarallax(document.querySelectorAll('[data-jarallax-video]'));
+  }
 });
