@@ -3,3 +3,4 @@ export { default as ContentContainer } from './content-container';
 export { default as MediaQueries } from './media-queries';
 export { default as MockPageContent } from './mock-page-content';
 export { default as Button } from './button';
+export { default as StaticPropTypes } from './static-prop-types';

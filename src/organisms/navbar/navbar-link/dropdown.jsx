@@ -6,7 +6,7 @@ import {
 // WARNING: This component is not complete
 // Don't pass a dropdown prop yet
 
-const renderLabel = ({ label, link }) => (
+const renderLabel = (label, link) => (
   <div>
     TODO: Implement this column render
     {label}
@@ -25,9 +25,9 @@ const Dropdown = ({ dropdown }) => (
       <Fragment>
         {dropdown.length > 0 &&
           dropdown[0].isArray ?
-            dropdown.map(column =>
-              renderColumn(column),
-            ) : renderColumn(dropdown)
+          dropdown.map(column =>
+            renderColumn(column),
+          ) : renderColumn(dropdown)
         }
       </Fragment> : dropdown
     }
@@ -48,6 +48,10 @@ Dropdown.propTypes = {
     ])),
     element,
   ]).isRequired,
+};
+
+Dropdown.defaultProps = {
+  dropdown: undefined,
 };
 
 export default Dropdown;

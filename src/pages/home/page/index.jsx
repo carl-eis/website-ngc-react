@@ -7,12 +7,10 @@ import { MockPageContent } from '~/atoms';
 
 const Home = ({
   websiteTitle,
-  ...rest
 }) => (
   <DefaultTemplate
     navbar
     title={websiteTitle}
-    {...rest}
   >
     <FeaturedSlider
       backgroundImage="assets/images/banner-bg.jpg"
