@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { generate } from 'shortid';
 import {
   jarallax,
-  jarallaxElement,
-  jarallaxVideo,
 } from 'jarallax';
 
 import {
@@ -33,8 +31,9 @@ class FeaturedSlider extends Component {
   }
 
   componentDidMount() {
+    const { parallaxSpeed } = this.props;
     jarallax(document.querySelectorAll(`.jarallax-${this.state.bannerId}`), {
-      speed: 0.2,
+      speed: parallaxSpeed,
     });
   }
 
