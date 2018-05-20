@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import {
+  oneOfType, shape, element, arrayOf,
+} from 'prop-types';
 import { generate } from 'shortid';
 
 const {
@@ -12,6 +14,20 @@ const {
 
 
 class SparkScroller extends Component {
+  static propTypes = {
+    children: oneOfType([
+      arrayOf(shape()),
+      arrayOf(element),
+      shape(),
+      element,
+    ]),
+  }
+
+  static defaultProps = {
+    children: undefined,
+  }
+
+
   state = {
     infoId: `default-info-fade-${generate()}`,
   };
@@ -40,9 +56,5 @@ class SparkScroller extends Component {
     return <div />;
   }
 }
-
-SparkScroller.propTypes = {
-
-};
 
 export default SparkScroller;

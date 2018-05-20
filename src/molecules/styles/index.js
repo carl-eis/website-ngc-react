@@ -44,6 +44,7 @@ export const SliderContentContainer = styled.div`
   display: block;
   width: 100%;
   height: 550px;
+  background-image: url('${props => props.background}');
 
   .container {
     height: 100%;

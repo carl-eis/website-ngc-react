@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import { generate } from 'shortid';
+import {
+  jarallax,
+  jarallaxElement,
+  jarallaxVideo,
+} from 'jarallax';
 
 import {
   element, string, func, number,
@@ -15,14 +21,21 @@ import {
 
 
 class FeaturedSlider extends Component {
-  state = {};
+  constructor(props) {
+    super(props);
+    this.state = {
+      bannerId: generate(),
+    };
+  }
 
   componentWillMount() {
 
   }
 
   componentDidMount() {
-
+    jarallax(document.querySelectorAll(`.jarallax-${this.state.bannerId}`), {
+      speed: 0.2,
+    });
   }
 
   render() {
@@ -38,7 +51,11 @@ class FeaturedSlider extends Component {
 
     return (
       <SliderContainer data-qa="slider-container">
-        <SliderContentContainer data-qa="slider-content-container">
+        <SliderContentContainer
+          data-qa="slider-content-container"
+          background={backgroundImage}
+          className={`jarallax-${this.state.bannerId}`}
+        >
           <SparkScroller>
             <SliderContent data-qa="slider-content">
               <SliderContentFixed>
