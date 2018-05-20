@@ -7,6 +7,7 @@ export const NavbarContainer = styled.div`
   position: fixed;
   z-index: 10;
   width: 100%;
+  user-select: none;
 
   .fullheight {
     height: 100%;

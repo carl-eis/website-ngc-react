@@ -23,6 +23,7 @@ const Navbar = ({ title }) => (
             title="Home"
             subtitle="start here"
             dropdown={<div />}
+            link="/"
           />
           <NavbarLink
             title="News"
