@@ -5,6 +5,7 @@ export const SliderContainer = styled.div`
   width: 100%;
   height: 550px;
   position: relative;
+  background: #160962;
 `;
 
 export const SliderImageContainer = styled.div`
@@ -36,7 +37,11 @@ export const SliderImageContainer = styled.div`
 `;
 
 export const SliderContent = styled.div`
-
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `;
 
 export const SliderContentContainer = styled.div`
@@ -45,6 +50,7 @@ export const SliderContentContainer = styled.div`
   width: 100%;
   height: 550px;
   background-image: url('${props => props.background}');
+  opacity: .5;
 
   .container {
     height: 100%;
@@ -71,9 +77,14 @@ export const SliderContentFixed = styled.div`
   flex-direction: column;
   justify-content: center;
   opacity: 1;
+  padding-top: 80px;
 
   .btn {
     max-width: 300px;
+  }
+
+  &> div, p {
+    margin: 20px 0;
   }
 
   h1 {
@@ -83,4 +94,8 @@ export const SliderContentFixed = styled.div`
     font-weight: 500;
     letter-spacing: 0.03em;
   }
+`;
+
+export const ButtonContainer = styled.div`
+
 `;

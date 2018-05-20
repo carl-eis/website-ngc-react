@@ -42,7 +42,8 @@ class SparkScroller extends Component {
     if (children) {
       return (
         <SparkScroll.div
-          className={`container ${this.state.infoId}`}
+          className={`container fullheight ${this.state.infoId}`}
+          style={{ height: '100%' }}
           timeline={{
             topTop: { opacity: 1 },
             'topTop+450': { opacity: [0, 'easeOutQuart'] },

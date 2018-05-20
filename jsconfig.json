@@ -6,6 +6,11 @@
         "*"
       ]
     },
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   }
 }

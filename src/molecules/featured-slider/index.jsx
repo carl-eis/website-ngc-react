@@ -8,6 +8,8 @@ import {
   element, string, func, number,
 } from 'prop-types';
 
+import { Button } from '~/atoms';
+
 import SparkScroller from './sparkscroll';
 
 import {
@@ -15,6 +17,7 @@ import {
   SliderContentContainer,
   SliderContent,
   SliderContentFixed,
+  ButtonContainer,
 } from '../styles';
 
 
@@ -55,21 +58,20 @@ class FeaturedSlider extends Component {
           data-qa="slider-content-container"
           background={backgroundImage}
           className={`jarallax-${this.state.bannerId}`}
-        >
+        />
+        <SliderContent data-qa="slider-content">
           <SparkScroller>
-            <SliderContent data-qa="slider-content">
-              <SliderContentFixed>
-                <h1>{title}</h1>
-                <h1>{subtitle}</h1>
-                <p>{quote}</p>
-                <button className="btn btn-primary" onClick={buttonClick}>
-                  {buttonText}
-                </button>
-                {children}
-              </SliderContentFixed>
-            </SliderContent>
+            <SliderContentFixed data-qa="slider-content-fixed">
+              <h1>{title}</h1>
+              <h1>{subtitle}</h1>
+              <p>{quote}</p>
+              <ButtonContainer>
+                <Button text={buttonText} onClick={buttonClick} />
+              </ButtonContainer>
+              {children}
+            </SliderContentFixed>
           </SparkScroller>
-        </SliderContentContainer>
+        </SliderContent>
       </SliderContainer>
     );
   }
